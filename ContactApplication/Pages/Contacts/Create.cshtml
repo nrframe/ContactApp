@@ -1,0 +1,69 @@
+﻿@page
+@model ContactApplication.Pages.Contacts.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Contact</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Contact.firstName" class="control-label"></label>
+                <input asp-for="Contact.firstName" class="form-control" />
+                <span asp-validation-for="Contact.firstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contact.lastName" class="control-label"></label>
+                <input asp-for="Contact.lastName" class="form-control" />
+                <span asp-validation-for="Contact.lastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contact.userEmail" class="control-label"></label>
+                <input asp-for="Contact.userEmail" class="form-control" />
+                <span asp-validation-for="Contact.userEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contact.street" class="control-label"></label>
+                <input asp-for="Contact.street" class="form-control" />
+                <span asp-validation-for="Contact.street" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contact.city" class="control-label"></label>
+                <input asp-for="Contact.city" class="form-control" />
+                <span asp-validation-for="Contact.city" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contact.state" class="control-label"></label>
+                <input asp-for="Contact.state" class="form-control" />
+                <span asp-validation-for="Contact.state" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contact.zipcode" class="control-label"></label>
+                <input asp-for="Contact.zipcode" class="form-control" />
+                <span asp-validation-for="Contact.zipcode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contact.optins" class="control-label"></label>
+                <input asp-for="Contact.optins" class="form-control" />
+                <span asp-validation-for="Contact.optins" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
